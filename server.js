@@ -4,6 +4,11 @@ const PORT = process.env.PORT || 8080;
 
 const app = express();
 
+
+
+
+
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static('public'));
 
@@ -26,3 +31,4 @@ app.use(routes);
 app.listen(PORT, () =>
   console.log(`Server listening on: http://localhost:${PORT}`)
 );
+

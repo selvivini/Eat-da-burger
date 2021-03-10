@@ -2,7 +2,12 @@
 const mysql = require('mysql');
 const dotEnv = require('dotenv');
 
-dotEnv.config();
+const result= dotEnv.config();
+if (result.error) {
+  throw result.error
+}
+ 
+console.log(result.parsed)
 
 const connection = mysql.createConnection({
   host: process.env.DB_HOST,
