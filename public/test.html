@@ -2,50 +2,99 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="./assets/css/burger_style.css" type="text/css" />
-		<!-- Latest compiled and minified CSS & JS -->
-  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/burger_style.css" type="text/css" />
+    
+		<title>Eat-Da-Burger</title>
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		<script src="./assets/css/burger_style.css"></script>
-		<title>Burger App</title>
+		<script src="assets/js/burger.js"></script>
 	</head>
 	<body>
-		<div class="container">
+    <div class="container bg-warning p-3 rounded">
+      <img src= "assets/images/burger_img.jpg" class= "burger-img mt-3"/>
+		<h1>Eat Da Burger</h1>
+  
+     <div class= "row">
+       <div class= "col-md-6">
+        <div class="card bg-success">
+            <div class="list-group-item text-center rounded m-3 p-3 bg-warning h2 text-danger ">PREPARED</div>
+            <div class= "row">
+              <div class= col-md-9>
+               <li class="list-group-item rounded m-3 p-3 text-center">chicken burger</li>
+              
+              </div>
+              <div class="col-md-3">
+                <button class="btn-danger rounded m-3 p-2 text-center">Devour Me</button>
+              </div>
+              <div class= col-md-9>
+                <li class="list-group-item rounded m-3 p-3 text-center">Ham burger</li>
+               
+               </div>
+               <div class="col-md-3">
+                 <button class="btn-danger rounded m-3 p-2">Devour Me</button>
+               </div>
+               <div class= col-md-9>
+                <li class="list-group-item rounded m-3 p-3 text-center">Veggie burger</li>
+               
+               </div>
+               <div class="col-md-3">
+                 <button class="btn-danger rounded m-3 p-2">Devour Me</button>
+               </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class= "col-md-6">
+          <div class="card bg-success">
+            <div class="h2 text-danger rounded m-3 p-3 list-group-item text-center bg-warning">
+              DEVOURED
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <li class="list-group-item rounded m-3 p-3 text-center">chicken burger</li>
+              </div>
+              <div class="col-12">
+                <li class="list-group-item rounded m-3 p-3 text-center">Ham burger</li>
+              </div>
+              <div class="col-12">
+                <li class="list-group-item rounded m-3 p-3 text-center">veggie burger</li>
+              </div>
+            </div>
+       </div>
+       
 
-            <div class="jumbotron text-center">
-                <h1 class="text-center">Eat the Burger</h1>
-                <p>Make burgers, eat burgers.</p>
-                <br>
-                <h2>Make a Burger</h2>
-                <form class="create-form">
-
-                    <div class="form-group">
-                        <label for="newburger">New Burger:</label>
-                        <input type="text" id="newburger" name="burger">
-                    </div>
-                    <button type="submit">Add Burger</button>
-                </form>
-            </div><!-- /jumbotron -->
-
-            <div class="row ">
-                <!-- Undevoured Burgers -->
-                <div class="col-lg-6 text-center">
-                    <ul>
-                        <!-- {{#each burgers}} -->
-                            <p><span class="label">ID:</span> {{this.id}}</p>
-                            <p><span class="label">Burger:</span> {{this.burger_name}}</p>
-                            <button class="eatburger" data-id="{{this.id}}" data-newDevoured="{{devour}}">Eat the burger</button>
-                        <!-- {{/each}} -->
-                    </ul>
+      </div>
+       </div>
+     </div>
+     <div class="container mt-3">
+       <div class= row>
+         <div class="col-12">
+           <div class="card rounded">
+            <div class="row">
+              <div class="col-12">
+                <div class="list-group-item bg-danger rounded m-3 p-3 text-center text-light h2">
+                  CREATE A NEW BURGER
                 </div>
-                <!-- Devoured Burgers -->
-                <div class="col-lg-6">
-
+              </div>
+              <div class="row">
+                <div class= "col-md-9">
+                  
+                    
+              <input type="text" class="form-control m-1 bg-light" id="" placeholder="Enter the name of the burger you want to create" >
+                  
                 </div>
-            </div><!-- /row -->
+                <div class="col-md-3">
+                 <button class="btn-success rounded m-1 p-1 ">SUBMIT</button>
+                </div>
+              </div>
+             
+            </div>
+           </div>
+         </div>
+       </div>
+     </div>
+      
+ 
 
-        </div><!-- /container -->
 	</body>
 </html>
