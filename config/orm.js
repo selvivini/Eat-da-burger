@@ -101,4 +101,4 @@ const orm = {
 
 
 
-module.exports = connection;
+module.exports = orm;
