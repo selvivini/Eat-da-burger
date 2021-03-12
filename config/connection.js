@@ -6,7 +6,7 @@ const result= dotEnv.config();
 if (result.error) {
   throw result.error
 }
- 
+//  connection strings based on heroku serveror localhost
 if(process.env.JAWSDB_URL){
   connection= mysql.createConnection(process.env.JAWSDB_URL)  
 }else  {connection = mysql.createConnection({
